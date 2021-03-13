@@ -33,6 +33,9 @@ export const memoAppSlice = createSlice({
     addMemo: (state, action: PayloadAction<Memo>) => {
       state.memos.push(action.payload);
     },
+    addMemoAsync: (state, action: PayloadAction<Memo>) => {
+      console.log("addmemoasync ... (아무것도안해용)");
+    },
     removeMemo: (state, action: PayloadAction<number>) => {
       state.memos.splice(action.payload, 1);
     },
@@ -42,6 +45,7 @@ export const memoAppSlice = createSlice({
 export const {
   syncWithLocalStorage,
   addMemo,
+  addMemoAsync,
   removeMemo,
 } = memoAppSlice.actions;
 
